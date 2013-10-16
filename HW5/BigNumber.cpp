@@ -68,7 +68,7 @@ class BigDecimal{
 			for(int i = num1_dec.length() - 1; i >= 0; i--){
 				out = add(num1_dec[i], num2_dec[i], carry);
 				result = out + result;
-				if(out >= num1_dec[i] && out >= num2_dec[i]){
+				if(out >= num1_dec[i] && out >= num2_dec[i] && out >= carry){
 					carry = '0';
 				}else{
 					carry = '1';
@@ -78,7 +78,7 @@ class BigDecimal{
 			for(int i = num1_ones.length() - 1; i >= 0; i--){
                 out = add(num1_ones[i], num2_ones[i], carry);
                 result = out + result;
-                if(out >= num1_ones[i] && out >= num2_ones[i]){
+                if(out >= num1_ones[i] && out >= num2_ones[i] && out >= carry)){
                     carry = '0';
                 }else{
                     carry = '1';
